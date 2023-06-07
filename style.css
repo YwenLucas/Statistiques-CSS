@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* SETUP GENERAUX*/ 
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(243, 249, 253);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 800px;
+    height: 550px;
+    background-color: white;          /* POUR FEINTEZ LA SUPERPOSITION */
+    border-radius : 35px;
+}
+
+
+/* FONT SIZE ET COULEURS*/
+
+h1 {
+    font-size: 5rem;
+    color: white;
+}
+.note p {
+    font-size: 1.4rem;
+    color: rgba(201, 199, 199, 0.575);
+}
+
+h2 {
+    font-size: 2.25rem;
+    color: white;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+.gauche h3 {
+    color: rgba(212, 211, 211, 0.76);
+}
+
+.gauche .text p {
+    color:rgba(212, 211, 211, 0.76); 
+    font-size: 1.2rem;
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+
+/* PARTIE GAUCHE */ 
+
+.gauche {
+    background-image: linear-gradient(to right top, #312cea, #4232ef, #4f37f4, #5c3dfa, #6743ff);
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10% 20%;
+}
+
+
+.gauche .note {
+    background-image: linear-gradient(to top, #4633ed, #492fe4, #4b2adb, #4c26d2, #4d22c9);
+    border-radius: 150px;
+    width: 225px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.gauche .text h2 {
+    margin-bottom: 15px;
+}
+
+
+
+/* PARTIE DROITE*/ 
+
+.droite {
+    background-color: white;          /* POUR FEINTEZ LA SUPERPOSITION */
+    border-radius : 0px 35px 35px 0px;
+    padding: 10% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 60px;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+
+
+.droite .g img {
+    margin-right: 15px;
+}
+
+.box1, .box2, .box3 {
+    margin-bottom: 25px;
+}
+
+.box1, .box2, .box3, .box4 {
+    border-radius: 10px;
+}
+
+.box1 {
+    background-color: hsla(0, 100%, 67%, 0.082);
+}
+.box1 h4 {
+    color: hsl(0, 100%, 67%);
+}
+
+.box2 {
+    background-color: hsla(39, 100%, 56%, 0.055);
+}
+.box2 h4 {
+    color: hsl(39, 100%, 56%);
+}
+
+.box3 {
+    background-color: hsla(166, 100%, 37%, 0.062);
+}
+.box3 h4 {
+    color:hsl(166, 100%, 37%) ;
+}
+
+.box4 {
+    background-color: hsla(234, 85%, 45%, 0.068);
+}
+.box4 h4 {
+   color: hsl(234, 85%, 45%);
+}
+
+
+.slash, .total, .result {
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+.slash, .total {
+    color: grey;
+}
+.g {
+    display: flex;
+}
+
+.d {
+    display: flex;
+}
+
+.d .slash {
+    margin-left: 6px;
+    margin-right: 5px;
+}
+
+button {
+    background-color: #303b59;
+    color: white;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 60px;
+    border-radius: 35px;
+    border: 0;
+}
+
+button:hover {
+    background-color: #4f39f4;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE */ 
+
+@media (max-width : 900px) {
+    body {
+        display: flex;
+        height:120vh;
+        align-items: first baseline;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .gauche {
+        border-radius: 0 0 35px 35px;
+    }
+
+    .note {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
+    .droite h3 {
+        margin-bottom: 30px;
+    }
+    .droite button {
+        margin-top: 40px;
+    }
+
+
+    
+}
